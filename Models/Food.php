@@ -17,11 +17,11 @@ class Food extends Product{
   }
 
   public function getInfo() {
-    echo '<p>Ingredienti:</p><ul>';
+    echo '<p class=" text-center">Ingredienti:</p><ul>';
     foreach ($this->ingredients as $ingredient) {
         echo '<li>' . $ingredient . '</li>';
     }
-    echo '</ul><p>Valori Nutrizionali</p>';
+    echo '</ul><p class=" text-center">Valori Nutrizionali</p>';
     echo "<ul><li>Grassi: {$this->fats}g</li><li>Carboidrati: {$this->carbs}g</li><li>Proteine: {$this->proteins}g</li></ul>";
     echo 'Totale Cal: ' . (($this->fats * 9) + (($this->carbs + $this->proteins) * 4));
 }
