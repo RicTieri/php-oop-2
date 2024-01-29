@@ -2,16 +2,14 @@
 
 class Genre {
   public $firstGenre;
-  public $secondGenre;
-  public $thirdGenre;
+  public $imageUrl;
   
   /**
    * function to generate new Genre object
    */
-  public function __construct(string $_firstGenre, string $_secondGenre = null, string $_thirdGenre = null){
+  public function __construct(string $_firstGenre, string $_imageUrl = null){
     $this->firstGenre = $_firstGenre;
-    $this->secondGenre = $_secondGenre;
-    $this->thirdGenre = $_thirdGenre;
+    $this->imageUrl = $_imageUrl;
   }
 
 }

@@ -1,7 +1,7 @@
 <?php
 
-class Movie {
-  public $title;
+class Product {
+  public $name;
   public $year;
   public $genre;
   public $description;
