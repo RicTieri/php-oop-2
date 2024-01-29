@@ -9,7 +9,7 @@ class Food extends Product{
   public $proteins;
 
   public function __construct($ingridients , $_fats , $_carbs , $_proteins){
-    parent::__construct()
+    parent::__construct(string $_name, float $_price, bool $_isAvailable , Category $_category, string $_description, int $_pieceLeft, string $_imageUrl);
     $this->ingridients = $_ingridients;
     $this->fats = $_fats;
     $this->carbs = $_carbs;

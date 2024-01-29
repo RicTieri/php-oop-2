@@ -2,39 +2,24 @@
 
 class Product {
   public $name;
-  public $year;
-  public $genre;
+  public $price;
+  public $isAvailable;
+  public $category;
   public $description;
-  public $duration;
+  public $pieceLeft;
   public $imageUrl;
   
   /**
    * function to generate new Movie object
    */
-  public function __construct(string $_title, int $_year, Genre $_genre, string $_description, int $_duration, string $_imageUrl){
-    $this->title = $_title;
-    $this->year = $_year;
-    $this->genre = $_genre;
+  public function __construct(string $_name, float $_price, bool $_isAvailable , Category $_category, string $_description, int $_pieceLeft, string $_imageUrl){
+    $this->title = $_name;
+    $this->price = $_price;
+    $this->isAvailable = $_isAvailable;
+    $this->category = $_category;
     $this->description = $_description;
-    $this->duration = $_duration;
+    $this->pieceLeft = $_pieceLeft;
     $this->imageUrl = $_imageUrl;
-  }
-
-  public function getDuration(){
-    $hours = intval($this->duration / 60);
-    $remainingMinutes = $this->duration % 60;
-
-    $output = '';
-
-    if ($hours > 0) {
-        $output .= $hours . 'h ';
-    }
-
-    if ($remainingMinutes > 0) {
-        $output .= $remainingMinutes . 'm';
-    }
-
-    return $output;
   }
 
 }
